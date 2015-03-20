@@ -18,5 +18,15 @@ describe('ToDoController', function() {
     expect(scope.todos).toBeUndefined();
   });
 
+  describe('when adding a to-do item', function() {
+
+    it('displays item in the list', function() {
+      scope.newToDo = 'walk the dog';
+      scope.addToDo();
+      scope.$apply();
+      httpBackend.flush();
+    });
+  });
+
 
 });

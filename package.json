@@ -4,7 +4,7 @@
   "description": "To-Do list app",
   "main": "index.js",
   "scripts": {
-    "test": "karma start test/karma.conf.js"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",

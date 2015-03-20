@@ -13,9 +13,15 @@
 <body>
   <div ng-controller="ToDoController">
     <form name="frm">
-      <input type="text" name="newToDo" placeholder="Be awesome"required>
-      <button>Add</button>
+      <input type="text" name="newToDo" ng-model="newToDo" placeholder="Be awesome"required>
+      <button ng-click="addToDo()">Add</button>
     </form>
+      <button>Clear Completed</button>
+      <ul>
+          <li ng-repeat="todo in todos">
+            <input type="checkbox">
+          </li>
+      </ul>
   </div>
 </body>
 </html>

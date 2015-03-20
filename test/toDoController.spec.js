@@ -11,7 +11,12 @@ describe('ToDoController', function() {
   }));
 
   it('initialises with an empty entry field', function() {
-    expect(scope.jpoiqwjer).toBeUndefined();
+    expect(scope.newToDo).toBeUndefined();
   });
+
+  it('initialises with an empty list', function() {
+    expect(scope.todos).toBeUndefined();
+  });
+
 
 });

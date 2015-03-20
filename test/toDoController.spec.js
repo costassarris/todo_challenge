@@ -15,16 +15,15 @@ describe('ToDoController', function() {
   });
 
   it('initialises with an empty list', function() {
-    expect(scope.todos).toBeUndefined();
+    expect(scope.todos).toEqual([]);
   });
 
   describe('when adding a to-do item', function() {
 
     it('displays item in the list', function() {
-      scope.newToDo = 'walk the dog';
+      scope.newToDo = "walk the dog";
       scope.addToDo();
-      scope.$apply();
-      httpBackend.flush();
+      expect(scope.todos[0].title).toEqual("walk the dog");
     });
   });
 

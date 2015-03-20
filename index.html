@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="ToDo">
 <head>
+  <meta charset="utf-8">
   <title>To-Do</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/toDoController.js"></script>
 </head>
 <body>
-  <div ng-controller="toDoController">
+  <div ng-controller="ToDoController">
     <form name="frm">
       <input type="text" name="newToDo" placeholder="Be awesome"required>
       <button>Add</button>

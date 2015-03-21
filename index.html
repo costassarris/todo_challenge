@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>To-Do</title>
+  <style>
+  .done{text-decoration: line-through; color: #ccc;}
+  </style>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -14,10 +17,10 @@
   <h1>To-Do</h1>
   <div ng-controller="ToDoController">
     <form name="frm" ng-submit="addToDo()">
-      <input type="text" name="newToDo" ng-model="newToDo" placeholder="Be awesome"required>
+      <input type="text" name="newToDo" ng-model="newToDo" placeholder="Walk the dog..."required>
       <button ng-disabled="frm.$invalid">Add</button>
     </form>
-      <button>Clear Completed</button>
+      <button ng-click="clearCompleted()">Clear Completed</button>
       <ul>
           <li ng-repeat="todo in todos">
             <input type="checkbox" ng-model="todo.done">

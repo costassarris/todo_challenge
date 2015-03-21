@@ -18,14 +18,23 @@ describe('ToDoController', function() {
     expect(scope.todos).toEqual([]);
   });
 
-  describe('when adding a to-do item', function() {
-
-    it('displays item in the list', function() {
-      scope.newToDo = "walk the dog";
-      scope.addToDo();
-      expect(scope.todos[0].title).toEqual("walk the dog");
-    });
+  it('displays added tasks to the list', function() {
+    scope.newToDo = "walk the dog";
+    scope.addToDo();
+    expect(scope.todos[0].title).toEqual("walk the dog");
   });
 
+  var itemDone = {"title":"shopping", "done":true};
+
+  it('displays a ticked checkbox when task is done', function() {
+    scope.todos.push(itemDone);
+    expect(scope.todos[0].done).toBe(true);
+  });
+
+  it('can remove completed taks from the list', function(){
+    scope.todos.push(itemDone);
+    scope.clearCompleted();
+    expect(scope.todos).toEqual([]);
+  });
 
 });

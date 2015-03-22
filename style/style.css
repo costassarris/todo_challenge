@@ -1,0 +1,13 @@
+body {
+  background-color: #FFFF66;
+  text-align: center;
+}
+
+#newToDo {
+  width: 300px;
+}
+
+#list {
+  display: inline-block;
+  text-align: left;
+}

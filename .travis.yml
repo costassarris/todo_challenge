@@ -7,3 +7,8 @@ node_js:
   - "0.6"
   - "iojs"
   - "iojs-v1.0.4"
+before_script:
+  - 'npm install -g bower'
+  - 'npm install -g karma-cli'
+  - 'npm install'
+  - 'bower install'

@@ -31,7 +31,7 @@ describe('ToDoController', function() {
     expect(scope.todos[0].done).toBe(true);
   });
 
-  it('can remove completed taks from the list', function(){
+  it('can remove completed tasks from the list', function(){
     scope.todos.push(itemDone);
     scope.clearCompleted();
     expect(scope.todos).toEqual([]);

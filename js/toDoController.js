@@ -12,4 +12,8 @@ toDo.controller('ToDoController', ['$scope', function($scope) {
     })
   }
 
+  $scope.clearAll = function() {
+    $scope.todos = [];
+  }
+
 }]);

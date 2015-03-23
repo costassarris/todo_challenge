@@ -1,14 +1,8 @@
 body {
-  background-color: #FFFF66;
-  text-align: center;
+  background-color: #;
 }
 
-#newToDo {
-  width: 300px;
-}
-
-#list {
-  display: inline-block;
-  text-align: left;
-  font-size: 20px;
+.btn {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }

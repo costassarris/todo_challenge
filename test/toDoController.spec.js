@@ -37,4 +37,13 @@ describe('ToDoController', function() {
     expect(scope.todos).toEqual([]);
   });
 
+  it('can clear all items from list', function() {
+    scope.newToDo = "walk the dog";
+    scope.addToDo();
+    scope.newToDo = "go to the gym";
+    scope.addToDo();
+    scope.clearAll();
+    expect(scope.todos).toEqual([]);
+  });
+
 });

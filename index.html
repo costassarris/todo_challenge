@@ -31,10 +31,12 @@
       <h5>Incomplete: {{incompleteTotal()}}</h5>
       <h5>Complete: {{completedTotal()}}</h5>
         <ul id="list" class="list-group">
-            <a href="#" editable-text="todo.title" class="list-group-item" ng-repeat="todo in todos">
+            <li class="list-group-item" ng-repeat="todo in todos">
               <input type="checkbox" ng-model="todo.done">
-              <span ng-class="{'done':todo.done}">{{todo.title}}</span>
-            </a>
+              <span ng-class="{'done':todo.done}">
+                <a href="#" editable-text="todo.title">{{todo.title}}</a>
+              </span>
+            </li>
         </ul>
     </div>
   </div>

@@ -37,13 +37,26 @@ describe('ToDoController', function() {
     expect(scope.todos).toEqual([]);
   });
 
-  it('can clear all items from list', function() {
+  it('can clear all tasks from list', function() {
     scope.newToDo = "walk the dog";
     scope.addToDo();
     scope.newToDo = "go to the gym";
     scope.addToDo();
     scope.clearAll();
     expect(scope.todos).toEqual([]);
+  });
+
+  it('knows the number of incomplete tasks', function() {
+    scope.newToDo = "walk the dog";
+    scope.addToDo();
+    scope.newToDo = "go to the gym";
+    scope.addToDo();
+    expect(scope.incompleteTotal()).toEqual(2);
+  });
+
+  it('knows the number of completed tasks', function() {
+    scope.todos.push(itemDone);
+    expect(scope.completedTotal()).toEqual(1);
   });
 
 });

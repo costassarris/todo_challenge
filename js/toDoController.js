@@ -16,4 +16,18 @@ toDo.controller('ToDoController', ['$scope', function($scope) {
     $scope.todos = [];
   }
 
+  $scope.incompleteTotal = function() {
+    total = $scope.todos.filter(function(item){
+      return !item.done
+    }).length;
+    return total;
+  }
+
+  $scope.completedTotal = function() {
+    total = $scope.todos.filter(function(item){
+      return item.done
+    }).length;
+    return total;
+  }
+
 }]);

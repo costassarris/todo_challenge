@@ -11,7 +11,6 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-ui-sortable/sortable.js"></script>
   <script src="js/app.js"></script>
   <script src="js/toDoController.js"></script>
 </head>
@@ -27,8 +26,9 @@
         <button ng-click="clearCompleted()" class="btn btn-warning">Clear Completed</button>
         <button ng-click="clearAll()" class="btn btn-danger">Clear All</button>
       </form>
-
-        <ul ui-sortable id="list" class="list-group">
+      <h5>Incomplete: {{incompleteTotal()}}</h5>
+      <h5>Complete: {{completedTotal()}}</h5>
+        <ul id="list" class="list-group">
             <li class="list-group-item" ng-repeat="todo in todos">
               <input type="checkbox" ng-model="todo.done">
               <span ng-class="{'done':todo.done}">{{todo.title}}</span>

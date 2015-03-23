@@ -1,1 +1,1 @@
-var toDo = angular.module('ToDo', ['ui.sortable']);
+var toDo = angular.module('ToDo', []);

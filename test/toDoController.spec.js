@@ -26,7 +26,7 @@ describe('ToDoController', function() {
 
   var itemDone = {"title":"shopping", "done":true};
 
-  it('displays a ticked checkbox when task is done', function() {
+  it('knows when a task is complete', function() {
     scope.todos.push(itemDone);
     expect(scope.todos[0].done).toBe(true);
   });

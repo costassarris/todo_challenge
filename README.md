@@ -1,4 +1,4 @@
-# To-Do App [![Build Status](https://travis-ci.org/costassarris/todo_challenge.svg?branch=master)](https://travis-ci.org/costassarris/todo_challenge)
+# To-Do App
 
 ![ToDo Preview](https://github.com/costassarris/todo_challenge/blob/master/Screen%20Shot.png?raw=true)
 
